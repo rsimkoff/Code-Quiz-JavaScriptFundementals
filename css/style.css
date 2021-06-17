@@ -1,0 +1,32 @@
+/* .show is shown */
+.show   {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid hsl(120, 81%, 44%);
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #0fa541c5;
+    background-color: rgba(159, 194, 202, 0.733);
+    margin: auto;
+}
+/* .hide is hidden */
+.hide {
+  display: none;
+
+  
+}
+
+.option-container{
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgba(184, 90, 134, 0.589);
+  background-color: rgba(37, 150, 88, 0.568);
+}
+.form{
+margin: auto; 
+
+}

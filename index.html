@@ -1,54 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Fundementals Quiz</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container d-flex justify-content-center mt-5">
-        
-    <div class="game-box col-lg-8 p-4">
-        <div class="row pb-4">
-            <div class="col-lg-4">
-                <h2 class="code-title">Coding Quiz Challenge</h2>
-            </div>
-            <hr>
-            <div class="col-lg-4"></div>
-
-            <div class="col-lg-4">
-                <h4 class="float-right text-primary d-none" id="timecounter">Timer :<span id="timer">60</span></h4>
-
-            </div>
-        </div>
-        <div class="quiz-questions d-none" id="quiz-questions">
-            <h2 class="text-info  text-center" id="title-item">Give me a new JS question</h2>
-            <div class="answers mt-5 mb-5" id="question-answers">
-            </div>
-            <h1 id="alert"></h1>
-            
-        </div>
-        <div class="btnstart d-flex  flex-column justify-content-center mt-8 mb-10" > 
-            <p id="info">"Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time/score by ten seconds"
-            </p>
-            <button class="btn btn-primary btn-lg" id="btnstart">Start Quiz</button>
-            
-        </div>
-        
-        <div class=" input-group mb-3 d-none" id="addscore">
-            <h5 class="d-block"><span id="score"></span></h5>
-                <input type="text" class="form-control" placeholder="Enter your initials:"
-                id="inputScore" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="input-group-text btn btn-primary" id="btnScore">Submit</button>
-
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Code Quiz</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <section id="quizStart" class="show">
+            <button id="startButton">Start Quiz</button>
+        </section>
+        <section id="quizActive" class="hide">
+            <h2>Time Remaining: <span id="timer"></span></h2>
+            <form>
+                <h3 id="questionText"></h3>
+                <div id="optionList">
+                    <input type="radio" id="option1" name="option" value="" class="option-container">
+                    <label for="option1" id="option1Label"></label>
+                
+                
+                    <input type="radio" id="option2" name="option" value="" class="option-container">
+                    <label for="option2" id="option2Label"></label>
+                
+                
+                    <input type="radio" id="option3" name="option" value="" class="option-container">
+                    <label for="option3" id="option3Label"></label>
+                
+                
+                    <input type="radio" id="option4" name="option" value="" class="option-container">
+                    <label for="option4" id="option4Label"></label>
+                
                 </div>
-        </div>
-    </div>
-</div>    <script src="script.js"></script> <Script>"scores.js"</Script>
-</body>
+                <button type="button" id="prevButton">Previous Question</button>
+                <button type="button" id="nextButton">Next Question</button>
+                <button type="button" id="submitButton">Submit Responses</button>
+            </form>
+        </section>
+        <section id="quizResults" class="hide">
+            <div id="displayRecentResults">
+                <p>
+                    User score is: 6/8
+                    Great Job!!!
+                </p>
+            </div>
+            <div id="quizResults">
+            </div>
+            
+            
+        </section>
+
+        <!-- attaching link for different scripts needed. -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/quiz.js"></script>
+        <script src="./js/scores.js"></script>
+    </body>
 </html>
-
-
